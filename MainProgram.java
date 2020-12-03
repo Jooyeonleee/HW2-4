@@ -27,6 +27,7 @@ public class MainProgram {
             System.out.println("No. It is the professor ID.\n");
         else if (studentID == 1715813)
         	hw_1715813();
+        else if(studentID == 1810052) calc_1810052();
         else
             System.out.println("To be developed...\n");
     }
@@ -70,5 +71,34 @@ public class MainProgram {
     		return num1;
     	else 
     		return num2;
+    }
+    
+    
+    private void calc_1810052() {
+    	double num;
+    	int select;
+    	Scanner scan_0052 = new Scanner(System.in);
+    	System.out.println("[Student ID]: 1810052");
+    	System.out.println("1. Calculate absolute value");
+    	System.out.println("2. Calculate floor value");
+    	System.out.print("Enter menu number: ");
+    	select = scan_0052.nextInt();
+    	System.out.println();
+		System.out.print("Enter a number to calculate: ");
+		num = scan_0052.nextDouble();
+    	if(select==1)	System.out.println("Absolute value of entered number: "+absolute_1810052(num));
+    	else if(select==2)	System.out.println("Floor value of entered number: "+floor_1810052(num));
+    	System.out.println();
+    }
+    
+    private double absolute_1810052(double a){
+    		if(a<0) return -a;
+    		else return a;
+    }
+
+    private int floor_1810052(double a){
+    	if(a%1==0) return (int)a;
+    	else if(a<0) return (int)a-1;
+    	else return (int)a;
     }
 }

@@ -84,8 +84,8 @@ public class MainProgram {
     	System.out.print("Enter menu number: ");
     	select = scan_0052.nextInt();
     	System.out.println();
-		System.out.print("Enter a number to calculate: ");
-		num = scan_0052.nextDouble();
+	System.out.print("Enter a number to calculate: ");
+	num = scan_0052.nextDouble();
     	if(select==1)	System.out.println("Absolute value of entered number: "+absolute_1810052(num));
     	else if(select==2)	System.out.println("Floor value of entered number: "+floor_1810052(num));
     	System.out.println();

@@ -31,6 +31,40 @@ public class MainProgram {
         else
             System.out.println("To be developed...\n");
     }
+public void hw_1716619() { 
+     	int result; 
+     	int num; 
+     	Scanner scan = new Scanner(System.in); 
+     	int menuNumber = printMenu_1716619(); 
+     	 
+     	System.out.print("input one number: "); 
+     	num = scan.nextInt(); 
+
+          
+     	if (menuNumber == 1) 
+     		result = factorial(num); 
+     	else 
+     		result = absolute(num); 
+     	System.out.println("Result: " + result); 
+     	System.out.println(); 
+     } 
+	 private int factorial(int num) { 
+    	 if (num==0) return 1;
+    	 else {
+    		int fac=num;
+    	    for(int i=num-1;i>0;i--)
+    		   fac*=i;
+    		   
+     		return fac; 
+    	 }
+     }
+      
+    private int absolute(int num) { 
+     	if(num< 0) 
+     		return -num; 
+     	else  
+     		return num; 
+     } 
     
     public void hw_1715813() {
     	int result;

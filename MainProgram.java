@@ -58,7 +58,7 @@ public void runModule(int studentID) {
      	return scan.nextInt(); 
      } 
       
-     private int factorial(int num) { 
+     public int factorial(int num) { 
     	 if (num==0) return 1;
     	 else {
     		int fac=num;
@@ -69,7 +69,7 @@ public void runModule(int studentID) {
     	 }
      }
       
-    private int absolute(int num) { 
+    public int absolute(int num) { 
      	if(num< 0) 
      		return -num; 
      	else  

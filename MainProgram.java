@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class MainProgram {
     public static void main(String[] args) {
@@ -22,16 +22,17 @@ public class MainProgram {
         return input.nextInt();
     }
 
-    public void runModule(int studentID) {
-        if (studentID == 11530)
-            System.out.println("No. It is the professor ID.\n");
-        else if (studentID == 1715813)
-        	hw_1715813();
-        else if(studentID == 1810052) calc_1810052();
-        else
-            System.out.println("To be developed...\n");
-    }
-public void hw_1716619() { 
+
+public void runModule(int studentID) { 
+         if (studentID == 11530) 
+             System.out.println("No. It is the professor ID.\n"); 
+        else if (studentID == 1716619) 
+        	hw_1716619(); 
+         else 
+             System.out.println("To be developed...\n"); 
+} 
+      
+     public void hw_1716619() { 
      	int result; 
      	int num; 
      	Scanner scan = new Scanner(System.in); 
@@ -48,7 +49,16 @@ public void hw_1716619() {
      	System.out.println("Result: " + result); 
      	System.out.println(); 
      } 
-	 private int factorial(int num) { 
+      
+     public int printMenu_1716619() { 
+     	Scanner scan = new Scanner(System.in); 
+     	System.out.println("1. Calculate factorial"); 
+     	System.out.println("2. Calculate absolute value"); 
+     	System.out.print("Enter menu number: "); 
+     	return scan.nextInt(); 
+     } 
+      
+     private int factorial(int num) { 
     	 if (num==0) return 1;
     	 else {
     		int fac=num;
@@ -65,74 +75,5 @@ public void hw_1716619() {
      	else  
      		return num; 
      } 
-    
-    public void hw_1715813() {
-    	int result;
-    	int num1;
-    	int num2;
-    	Scanner scan = new Scanner(System.in);
-    	int menuNumber = printMenu_1715813();
-    	
-    	System.out.print("input two numbers: ");
-    	num1 = scan.nextInt();
-    	num2 = scan.nextInt();
-        
-    	if (menuNumber == 1)
-    		result = max_1715813(num1, num2);
-    	else
-    		result = min_1715813(num1, num2);
-    	System.out.println("Result: " + result);
-    	System.out.println();
-    }
-    
-    public int printMenu_1715813() {
-    	Scanner scan = new Scanner(System.in);
-    	System.out.println("1. Calculate max");
-    	System.out.println("2. Calculate min");
-    	System.out.print("Enter menu number: ");
-    	return scan.nextInt();
-    }
-    
-    private int max_1715813(int num1, int num2) {
-    	if(num1 > num2)
-    		return num1;
-    	else 
-    		return num2;
-    }
-    
-    private int min_1715813(int num1, int num2) {
-    	if(num1 < num2)
-    		return num1;
-    	else 
-    		return num2;
-    }
-    
-    
-    private void calc_1810052() {
-    	double num;
-    	int select;
-    	Scanner scan_0052 = new Scanner(System.in);
-    	System.out.println("[Student ID]: 1810052");
-    	System.out.println("1. Calculate absolute value");
-    	System.out.println("2. Calculate floor value");
-    	System.out.print("Enter menu number: ");
-    	select = scan_0052.nextInt();
-    	System.out.println();
-	System.out.print("Enter a number to calculate: ");
-	num = scan_0052.nextDouble();
-    	if(select==1)	System.out.println("Absolute value of entered number: "+absolute_1810052(num));
-    	else if(select==2)	System.out.println("Floor value of entered number: "+floor_1810052(num));
-    	System.out.println();
-    }
-    
-    private double absolute_1810052(double a){
-    		if(a<0) return -a;
-    		else return a;
-    }
 
-    private int floor_1810052(double a){
-    	if(a%1==0) return (int)a;
-    	else if(a<0) return (int)a-1;
-    	else return (int)a;
-    }
 }

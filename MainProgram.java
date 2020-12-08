@@ -28,6 +28,7 @@ public class MainProgram {
         else if (studentID == 1715813)
         	hw_1715813();
         else if(studentID == 1810052) calc_1810052();
+        else if (studentID == 1810108) hw_1810108();
         else
             System.out.println("To be developed...\n");
     }
@@ -101,4 +102,36 @@ public class MainProgram {
     	else if(a<0) return (int)a-1;
     	else return (int)a;
     }
+    
+
+
+    public void hw_1810108(){
+	    double a;
+    	int select;
+    	Scanner scan = new Scanner(System.in);
+    	System.out.println("[Student ID: 1810108]");
+    	System.out.println("1. Calculate absolute value");
+    	System.out.println("2. Calculate squared value");
+    	System.out.print("Enter menu number: ");
+    	select = scan.nextInt();
+    	System.out.println();
+    	System.out.print("Enter an Integer: ");
+		a = scan.nextDouble();
+    	if (select==1)	System.out.println("Result : "+ ab_1810108(a));
+    	else if (select==2)	System.out.println("Result: "+ sq_1810108(a));
+    	System.out.println();
+	}
+
+	private double ab_1810108(double a){
+		if (a<0) return -a;
+		else return a;
+	}
+	
+	private double sq_1810108(double a){
+		return a*a;
+	}
+
+    
+    
+    
 }

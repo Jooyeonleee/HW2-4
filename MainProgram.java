@@ -60,14 +60,14 @@ public class MainProgram {
     	return scan.nextInt();
     }
     
-    private int max_1715813(int num1, int num2) {
+    public int max_1715813(int num1, int num2) {
     	if(num1 > num2)
     		return num1;
     	else 
     		return num2;
     }
     
-    private int min_1715813(int num1, int num2) {
+    public int min_1715813(int num1, int num2) {
     	if(num1 < num2)
     		return num1;
     	else 

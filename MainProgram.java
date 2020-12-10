@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MainProgram {
+public class git1test {
     public static void main(String[] args) {
         MainProgram mainProgram = new MainProgram();
         mainProgram.printBanner();
@@ -29,6 +29,7 @@ public class MainProgram {
         	hw_1715813();
         else if(studentID == 1810052) calc_1810052();
         else if (studentID == 1810108) hw_1810108();
+        else if (studentID == 1715295) hw_1715295();
         else
             System.out.println("To be developed...\n");
     }
@@ -85,8 +86,8 @@ public class MainProgram {
     	System.out.print("Enter menu number: ");
     	select = scan_0052.nextInt();
     	System.out.println();
-	System.out.print("Enter a number to calculate: ");
-	num = scan_0052.nextDouble();
+    	System.out.print("Enter a number to calculate: ");
+    	num = scan_0052.nextDouble();
     	if(select==1)	System.out.println("Absolute value of entered number: "+absolute_1810052(num));
     	else if(select==2)	System.out.println("Floor value of entered number: "+floor_1810052(num));
     	System.out.println();
@@ -131,7 +132,31 @@ public class MainProgram {
 		return a*a;
 	}
 
+	public void hw_1715295(){
+	    int num;
+    	int select;
+    	Scanner scan = new Scanner(System.in);
+    	System.out.println("[Student ID: 1715295]");
+    	System.out.println("1. Calculate factorial value");
+    	System.out.println("2. Calculate cube value");
+    	System.out.print("Enter menu number: ");
+    	select = scan.nextInt();
+    	System.out.println();
+    	System.out.print("Enter an Integer: ");
+		num = scan.nextInt();
+    	if (select==1)	System.out.println("Result : "+ factorial_1715295(num));
+    	else if (select==2)	System.out.println("Result: "+ cube_1715295(num));
+    	System.out.println();
+	}
     
+    public int factorial_1715295(int a) {
+    	if(a==0) return 1;
+    	if (a < 2) return a; 
+    	else	return a*factorial_1715295(a-1);	
+    }
     
+    public int cube_1715295(int a) {
+    	return a*a*a;
+    }
     
 }

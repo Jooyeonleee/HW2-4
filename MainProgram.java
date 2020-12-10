@@ -79,7 +79,7 @@ public class MainProgram {
     	double num;
     	int select;
     	Scanner scan_0052 = new Scanner(System.in);
-    	System.out.println("[Student ID]: 1810052");
+    	System.out.println("[Student ID: 1810052]");
     	System.out.println("1. Calculate absolute value");
     	System.out.println("2. Calculate floor value");
     	System.out.print("Enter menu number: ");

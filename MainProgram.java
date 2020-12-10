@@ -75,7 +75,7 @@ public class MainProgram {
     }
     
     
-    private void calc_1810052() {
+    public void calc_1810052() {
     	double num;
     	int select;
     	Scanner scan_0052 = new Scanner(System.in);
@@ -92,12 +92,12 @@ public class MainProgram {
     	System.out.println();
     }
     
-    private double absolute_1810052(double a){
+    public double absolute_1810052(double a){
     		if(a<0) return -a;
     		else return a;
     }
 
-    private int floor_1810052(double a){
+    public int floor_1810052(double a){
     	if(a%1==0) return (int)a;
     	else if(a<0) return (int)a-1;
     	else return (int)a;

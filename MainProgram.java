@@ -30,6 +30,7 @@ public class MainProgram {
         else if(studentID == 1810052) calc_1810052();
         else if (studentID == 1810108) hw_1810108();
         else if (studentID == 1715295) hw_1715295();
+        else if (studentID == 1715168) hw_1715168();
         else
             System.out.println("To be developed...\n");
     }
@@ -158,5 +159,53 @@ public class MainProgram {
     public int cube_1715295(int a) {
     	return a*a*a;
     }
-    
+
+	public void hw_1715168 () {
+		printMenu_1715168();
+		int menuNumber = getNumber_1715168();
+		if (menuNumber == 1) {
+			System.out.println("You choose [1. Calculate power]");
+			printInputGuide_1715168("a^2");
+			int a = getNumber_1715168();
+			int answer = calculateSquare_1715168(a);
+			printAnswer_1715168(answer);
+		}
+		else if (menuNumber == 2) {
+			System.out.println("\nYou choose [2. Calculate absolute value]");
+			printInputGuide_1715168("|a|");
+			int a = getNumber_1715168();
+			int answer = calculateAbsValue_1715168(a);
+			printAnswer_1715168(answer);
+		}
+	}
+
+	public void printMenu_1715168 () {
+		System.out.println("[Student ID: 1715168]");
+		System.out.println("1. Calculate square");
+		System.out.println("2. Calculate absolute value");
+		System.out.print("Enter menu number: ");
+	}
+
+	public int calculateSquare_1715168(int operand) {
+		return operand*operand;
+	}
+
+	public int calculateAbsValue_1715168(int operand) {
+		if(operand < 0) return -operand;
+		else return operand;
+	}
+
+	public int getNumber_1715168() {
+		Scanner scan = new Scanner(System.in);
+		return scan.nextInt();
+	}
+
+	public void printInputGuide_1715168(String calculationTodo) {
+		System.out.println("I will calculate " + calculationTodo);
+		System.out.print("Please enter the number a: ");
+	}
+
+	public void printAnswer_1715168 (int answer) {
+		System.out.println("The answer is " + answer + "\n");
+	}
 }

@@ -164,7 +164,7 @@ public class MainProgram {
 		printMenu_1715168();
 		int menuNumber = getNumber_1715168();
 		if (menuNumber == 1) {
-			System.out.println("You choose [1. Calculate power]");
+			System.out.println("\nYou choose [1. Calculate power]");
 			printInputGuide_1715168("a^2");
 			int a = getNumber_1715168();
 			int answer = calculateSquare_1715168(a);

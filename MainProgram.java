@@ -25,14 +25,52 @@ public class MainProgram {
     public void runModule(int studentID) {
         if (studentID == 11530)
             System.out.println("No. It is the professor ID.\n");
-        else if (studentID == 1715813)
-        	hw_1715813();
+        else if (studentID == 1715813) hw_1715813();
         else if(studentID == 1810052) calc_1810052();
         else if (studentID == 1810108) hw_1810108();
         else if (studentID == 1715295) hw_1715295();
         else if (studentID == 1715168) hw_1715168();
+        else if (studentID == 1716353) hw_1716353(studentID);
         else
             System.out.println("To be developed...\n");
+    }
+    
+    public void hw_1716353(int sid) {
+    	Scanner scan = new Scanner(System.in);
+    	
+    	System.out.println("[Student ID: " + sid + "]"); // print my student ID
+    	System.out.println("		1. Calculate Absolute Value of the Number");
+    	System.out.println("		2. Calculate Max Value");
+    	System.out.print("Enter menu number: ");
+    	
+    	int menu = scan.nextInt();  // 
+    	
+    	if (menu == 1) { // 1. Calculate Absolute Value of the Number
+    		System.out.print("Enter One Number: ");
+    		int num = scan.nextInt();    		
+
+    		System.out.println("The Result is: " + calc1_1716353(num)+"\n");
+    	}
+    	else if(menu == 2)  { // 2. Calculate Max Value
+    		System.out.print("Enter Two Number: ");
+    		int a = scan.nextInt(); 
+    		int b = scan.nextInt();
+
+    		System.out.println("The Result is: " + calc2_1716353(a,b)+'\n');
+    	}
+    	else {System.out.println("wrong number");}
+    }
+    
+    public int calc1_1716353(int a) { //ABS
+    	if (a>= 0)
+    		return a;
+    	else 
+    		return -a;
+    }
+    
+    public int calc2_1716353(int a, int b) { //MAX
+    	if (a >= b) return a;
+    	else return b;
     }
     
     public void hw_1715813() {
